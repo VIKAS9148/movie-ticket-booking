@@ -85,6 +85,7 @@ Total Price: ₹${totalPrice}`
           <option value="Pushpa 2">Pushpa 2</option>
           <option value="Jawan 2">Jawan 2</option>
           <option value="Kantara 2">Kantara 2</option>
+          <option value="War 3">War 3</option>
         </select>
 
         <input
