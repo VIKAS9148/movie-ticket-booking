@@ -10,20 +10,20 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t movie-booking-app:${BUILD_NUMBER} .'
+                bat 'docker build -t movie-booking-app:%BUILD_NUMBER% .'
             }
         }
 
         stage('Stop Old Container') {
             steps {
-                sh 'docker stop movie-app || true'
-                sh 'docker rm movie-app || true'
+                bat 'docker stop movie-app || exit 0'
+                bat 'docker rm movie-app || exit 0'
             }
         }
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d -p 3000:80 --name movie-app movie-booking-app:${BUILD_NUMBER}'
+                bat 'docker run -d -p 3000:80 --name movie-app movie-booking-app:%BUILD_NUMBER%'
             }
         }
     }
