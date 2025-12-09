@@ -87,6 +87,7 @@ Total Price: ₹${totalPrice}`
           <option value="Kantara 2">Kantara 2</option>
           <option value="War 3">War 3</option>
            <option value="love">War 3</option>
+           <option value="pathan">pathan</option>
         </select>
 
         <input
